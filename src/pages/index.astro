@@ -2,28 +2,24 @@
 import Layout from "../layouts/Layout.astro";
 import PageTitle from "../components/PageTitle.astro";
 
-const list = [
-  {
-    title: "hoge",
-    link: "/1",
-  },{
-    title: "hoge2",
-    link: "/2",
-  },
-];
+const list = ["左右反転Gridレイアウト"];
 ---
 
 <Layout title="CSS Examples">
-  <main class="container mx-auto">
-    <PageTitle title="CSS Examples" />
-    <ul>
-      {
-        list.map(({ title, link }) => (
-          <li>
-            <a href={link}>{title}</a>
-          </li>
-        ))
-      }
-    </ul>
+  <main class="container mx-auto px-5">
+    <PageTitle title="CSS Examples" back />
+    <div class="overflow-hidden rounded-lg bg-white shadow">
+      <ul class="divide-y divide-gray-100">
+        {
+          list.map((title, index) => (
+            <li class=" hover:bg-blue-200">
+              <a href={`/${index + 1}`} class="block px-5 py-3">
+                {title}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
   </main>
 </Layout>
