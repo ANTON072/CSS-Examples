@@ -3,7 +3,7 @@ import PageTitle from "../components/PageTitle.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Welcome to Astro.">
+<Layout title="左右反転Gridレイアウト">
   <main class="container mx-auto px-5">
     <PageTitle title="左右反転Gridレイアウト" back />
     <div class="sm:grid sm:grid-cols-[1fr,1fr]">
@@ -11,25 +11,29 @@ import Layout from "../layouts/Layout.astro";
         <img src="/images/side.JPG" alt="" class="w-full" />
       </div>
       <div class="grid items-center p-[2.4rem]">
-        <h2 class="text-lg font-bold">Title.1</h2>
-        <p>
-          Lorem dolor pariatur do laboris. Do ad non reprehenderit magna id
-          cupidatat. Et ea anim ea sunt cillum non.Lorem dolor pariatur do
-          laboris. Do ad non reprehenderit magna id cupidatat. Et ea anim ea
-          sunt cillum non.
-        </p>
+        <div>
+          <h2 class="text-lg font-bold">Title.1</h2>
+          <p>
+            Lorem dolor pariatur do laboris. Do ad non reprehenderit magna id
+            cupidatat. Et ea anim ea sunt cillum non.Lorem dolor pariatur do
+            laboris. Do ad non reprehenderit magna id cupidatat. Et ea anim ea
+            sunt cillum non.
+          </p>
+        </div>
       </div>
-      <div class="col-start-2 row-start-2">
+      <div class="col-[2] row-[2]">
         <img src="/images/side2.JPG" alt="" class="w-full" />
       </div>
-      <div class="col-start-1 row-start-2 grid items-center p-[2.4rem]">
-        <h2 class="text-lg font-bold">Title.2</h2>
-        <p>
-          Lorem dolor pariatur do laboris. Do ad non reprehenderit magna id
-          cupidatat. Et ea anim ea sunt cillum non.Lorem dolor pariatur do
-          laboris. Do ad non reprehenderit magna id cupidatat. Et ea anim ea
-          sunt cillum non.
-        </p>
+      <div class="col-[1] row-[2] grid items-center p-[2.4rem]">
+        <div>
+          <h2 class="text-lg font-bold">Title.2</h2>
+          <p>
+            Lorem dolor pariatur do laboris. Do ad non reprehenderit magna id
+            cupidatat. Et ea anim ea sunt cillum non.Lorem dolor pariatur do
+            laboris. Do ad non reprehenderit magna id cupidatat. Et ea anim ea
+            sunt cillum non.
+          </p>
+        </div>
       </div>
     </div>
   </main>
