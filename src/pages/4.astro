@@ -1,0 +1,57 @@
+---
+import PageTitle from "../components/PageTitle.astro";
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Gridでタイル型レイアウト">
+  <main class="container mx-auto px-5">
+    <PageTitle title="Gridでタイル型レイアウト" back />
+    <div class="mx-auto max-w-[960px]">
+      <div
+        class="grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] md:grid-rows-[repeat(3,160px)]"
+      >
+        <div
+          class="grid aspect-square h-[100%] place-items-center border-[0.5px] border-[#AEAEAE] md:col-[1] md:row-[1] md:aspect-[inherit]"
+        >
+          <img
+            src="/images/budpad.png"
+            alt=""
+            class="h-auto w-[min(40%,80px)]"
+          />
+        </div>
+        <div
+          class="grid aspect-square h-[100%] place-items-center border-[0.5px] border-[#AEAEAE] md:col-[1] md:row-[2/4] md:aspect-[inherit]"
+        >
+          <img
+            src="/images/kotori.png"
+            alt=""
+            class="h-auto w-[min(40%,80px)]"
+          />
+        </div>
+        <div
+          class="grid aspect-square h-[100%] place-items-center border-[0.5px] border-[#AEAEAE] md:col-[2] md:row-[3/4] md:aspect-[inherit]"
+        >
+          <img
+            src="/images/misoda.png"
+            alt=""
+            class="h-auto w-[min(40%,80px)]"
+          />
+        </div>
+        <div
+          class="grid aspect-square h-[100%] place-items-center border-[0.5px] border-[#AEAEAE] md:col-[3] md:row-[3/4] md:aspect-[inherit]"
+        >
+          <img
+            src="/images/snovicke.png"
+            alt=""
+            class="h-auto w-[min(40%,80px)]"
+          />
+        </div>
+        <div
+          class="grid aspect-square h-[100%] place-items-center border-[0.5px] border-[#AEAEAE] md:col-[2/4] md:row-[1/3] md:aspect-[inherit]"
+        >
+          <img src="/images/zen.png" alt="" class="h-auto w-[min(40%,80px)]" />
+        </div>
+      </div>
+    </div>
+  </main>
+</Layout>
