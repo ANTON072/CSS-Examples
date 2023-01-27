@@ -1,0 +1,61 @@
+---
+import PageTitle from "../components/PageTitle.astro";
+import Layout from "../layouts/Layout.astro";
+import { Icon } from "astro-icon";
+
+const images = ["/images/side.JPG", "/images/side2.JPG"];
+---
+
+<Layout title="Gridでサイドバー+記事レイアウト">
+  <main class="container mx-auto px-5">
+    <PageTitle title="Gridでサイドバー+記事レイアウト" back />
+    <div class="m-auto max-w-[960px] py-[100px] px-[16px]">
+      <div class="grid gap-[24px] md:grid-cols-[240px,1fr,56px]">
+        <!-- SNS Begin -->
+        <div class="relative right-[calc(-56px-16px)] md:col-[3] md:row-[1]">
+          <ul class="flex flex-col md:sticky md:top-[10px]">
+            <li class="mb-[10px]">
+              <Icon name="twitter" width="56" height="56" />
+            </li>
+            <li>
+              <Icon name="facebook" width="56" height="56" />
+            </li>
+          </ul>
+        </div>
+        <!-- SNS End -->
+        <main class="mr-[calc(-56px-24px)] md:col-[2/3] md:row-[1]">
+          <article>
+            <h1 class="mb-[1em] text-[40px] leading-[40px]">
+              タイトルが入ります
+            </h1>
+            {
+              Array(15)
+                .fill("")
+                .map((_, index) => (
+                  <div>
+                    {index > 0 && (
+                      <h2 class="mt-[2em] mb-[1em] text-[24px]">
+                        見出しが入ります
+                      </h2>
+                    )}
+                    <p class="text-[16px] leading-[1.75]">
+                      説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。説明文章が入ります。
+                    </p>
+                  </div>
+                ))
+            }
+          </article>
+        </main>
+        <aside class="md:col-[1]">
+          {
+            images.map((src) => (
+              <a href="#" class="mb-[10px] block">
+                <img src={src} alt="" />
+              </a>
+            ))
+          }
+        </aside>
+      </div>
+    </div>
+  </main>
+</Layout>
